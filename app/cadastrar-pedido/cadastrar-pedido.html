@@ -1,0 +1,50 @@
+<main class="pedido-page">
+
+	<h1>Cadastrar pedido</h1>	
+      <form (ngSubmit)="cadastrar()">
+
+    <label for="id">ID:</label>
+
+    <input
+      type="number"
+      id="id"
+      name="id"
+      required
+    >
+
+    <label for="pedido">Descrição:</label>
+
+    <textarea
+      id="pedidoSaiuParaEntrega"
+      name="pedidoSaiuParaEntrega"
+      required
+    ></textarea>
+
+    <label for="prazo">Prazo de conclusão:</label>
+
+    <input
+      type="datetime-local"
+      id="pedidoEntregue"
+      name="pedidoEntregue"
+      [(ngModel)]="pedidoEntregue"
+      required
+    >
+
+    <button type="submit">
+      Cadastrar
+    </button>
+
+  </form>
+		
+	<section class="card" aria-labelledby="pedido-recebido-titulo">
+			<h2 id="pedido-recebido-titulo">Pedido recebido</h2>
+	</section>
+</main>
+
+  <div class="botoes">
+            <button type="button" class="aceitar" style="background-color: white;">Aceitar</button>
+            <button type="button" class="em-preparo" style="background-color: blue;">EmPreparo</button>
+            <button type="button" class="em-rota" style="background-color: yellow;">EmRota</button>
+            <button type="button" class="entregue" style="background-color: green;">Entregue</button>
+            <button type="button" class="cancelar-pedido" style="background-color: orange;">CancelarPedido</button>
+        </div>

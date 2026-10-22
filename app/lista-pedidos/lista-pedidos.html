@@ -1,0 +1,14 @@
+<div class="lista-pedidos">
+    <div class="pedido" *ngFor="let pedido of pedidos">
+        <span>{{ pedido }}</span>
+        <div class="botoes">
+            <button type="button" class="aceitar" style="background-color: white;">Aceitar</button>
+            <button type="button" class="em-preparo" style="background-color: blue;">EmPreparo</button>
+            <button type="button" class="em-rota" style="background-color: yellow;">EmRota</button>
+            <button type="button" class="entregue" style="background-color: green;">Entregue</button>
+            <button type="button" class="cancelar-pedido" style="background-color: orange;">CancelarPedido</button>
+        </div>
+    </div>
+</div>
+
+<a routerLink="/cadastro">Voltar ao cadastro</a>    
